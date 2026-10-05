@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import { useLang } from "../language";
+import { localized } from "../site";
 import Mark from "./Mark";
 
 export default function Footer() {
-  const { t, site } = useLang();
+  const { t, site, lang } = useLang();
 
   return (
     <footer className="site-footer">
@@ -13,6 +15,13 @@ export default function Footer() {
           <p>{t.footer.line}</p>
         </div>
       </div>
+      <nav className="footer-nav" aria-label="Primary">
+        {t.nav.map((item) => (
+          <Link key={item.href} to={localized(lang, item.href)}>
+            {item.label}
+          </Link>
+        ))}
+      </nav>
       <div>
         <p>
           {site.legalName}

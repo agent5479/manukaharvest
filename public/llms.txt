@@ -1,0 +1,21 @@
+# Mānuka Harvest
+
+> Wild-grown mānuka leaf tea from Golden Bay, New Zealand. Hand-harvested, dried, and packed in small batches in Tākaka, and supplied mainly to China.
+
+Mānuka Harvest Limited packs loose-leaf herbal tea from wild Leptospermum scoparium. The leaf is caffeine-free, with nothing added. Retail bags are 25g and 60g. Export formats are arranged from the packing room.
+
+## Pages
+
+- [Home](https://agent5479.github.io/manukaharvest/): The house, the cup, and where to go next.
+- [The tea](https://agent5479.github.io/manukaharvest/tea/): Flavour, bags, brewing, and kitchen use.
+- [Origin](https://agent5479.github.io/manukaharvest/origin/): Golden Bay, the harvest, the tradition, and Julian Hall.
+- [Order](https://agent5479.github.io/manukaharvest/order/): Wholesale supply for China and New Zealand shops.
+- [Contact](https://agent5479.github.io/manukaharvest/contact/): The packing room in Tākaka.
+
+## 中文
+
+- [首页](https://agent5479.github.io/manukaharvest/zh/): 黄金湾野生麦卢卡叶茶。
+- [茶品](https://agent5479.github.io/manukaharvest/zh/tea/): 风味、规格与冲泡。
+- [产地](https://agent5479.github.io/manukaharvest/zh/origin/): 塔卡卡、采收、传承与创始人。
+- [订购](https://agent5479.github.io/manukaharvest/zh/order/): 面向中国的出口供货。
+- [联络](https://agent5479.github.io/manukaharvest/zh/contact/): 塔卡卡包装间。

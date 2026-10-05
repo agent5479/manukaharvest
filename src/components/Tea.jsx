@@ -1,26 +1,29 @@
 import { useLang } from "../language";
 
-export default function Tea() {
-  const { t } = useLang();
+export default function Tea({ lead = false }) {
+  const { t, site } = useLang();
+  const Title = lead ? "h1" : "h2";
 
   return (
-    <section className="section tea" id="tea">
+    <section className={`section tea${lead ? " lead-page" : ""}`} id="tea">
+      <div className="tea-layout">
       <div className="section-intro">
         <p className="index">
           <span>{t.tea.index}</span>
           {t.tea.kicker}
         </p>
-        <h2>{t.tea.title}</h2>
+        <Title>{t.tea.title}</Title>
         <p className="lede">{t.tea.lede}</p>
+      </div>
+      <figure className="frame frame-cup">
+        <img src={site.images.cup} alt={t.brew.imageAlt} />
+        <figcaption>{t.brew.caption}</figcaption>
+      </figure>
       </div>
       <div className="packs">
         {t.tea.packs.map((pack) => (
           <article className="pack" key={pack.weight}>
-            <div className="pouch" aria-hidden="true">
-              <span>Mānuka</span>
-              <strong>{pack.weight}</strong>
-              <em>Harvest</em>
-            </div>
+            <p className="pack-weight">{pack.weight}</p>
             <h3>{pack.name}</h3>
             <p>{pack.detail}</p>
           </article>
@@ -30,7 +33,6 @@ export default function Tea() {
           <p>{t.tea.exportBody}</p>
         </article>
       </div>
-      <p className="stand-in">{t.tea.note}</p>
       <ul className="points">
         {t.tea.points.map((point) => (
           <li key={point}>{point}</li>

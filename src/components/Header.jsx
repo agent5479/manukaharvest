@@ -1,11 +1,26 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useLang } from "../language";
+import { langFromPath, localized } from "../site";
 import Mark from "./Mark";
 
+function otherLanguagePath(pathname) {
+  const zh = langFromPath(pathname) === "zh";
+  const bare = pathname.replace(/\/$/, "") || "/";
+  if (zh) {
+    const rest = bare.replace(/^\/zh/, "") || "/";
+    return rest === "/" ? "/" : `${rest}/`;
+  }
+  if (bare === "/") return "/zh/";
+  return `/zh${bare}/`;
+}
+
 export default function Header() {
-  const { t, setLang } = useLang();
+  const { t, lang } = useLang();
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const onHome = pageIsHome(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -20,38 +35,32 @@ export default function Header() {
   }, [open]);
 
   const close = () => setOpen(false);
+  const solid = !onHome || scrolled || open;
 
   return (
-    <header className={`site-header${scrolled || open ? " is-solid" : ""}`}>
-      <a className="skip" href="#tea">
-        Skip to the tea
+    <header className={`site-header${solid ? " is-solid" : ""}`}>
+      <a className="skip" href="#content">
+        {t.skip}
       </a>
       <div className="header-inner">
-        <a className="brand" href="#top" onClick={close}>
+        <Link className="brand" to={localized(lang, "/")} onClick={close}>
           <Mark />
           <span>
             Mānuka
             <small>Harvest</small>
           </span>
-        </a>
+        </Link>
         <nav className={open ? "is-open" : ""} aria-label="Primary">
           {t.nav.map((item) => (
-            <a key={item.href} href={item.href} onClick={close}>
+            <NavLink key={item.href} to={localized(lang, item.href)} onClick={close}>
               {item.label}
-            </a>
+            </NavLink>
           ))}
-          <a className="nav-contact" href="#contact" onClick={close}>
-            {t.contact.kicker}
-          </a>
         </nav>
         <div className="header-tools">
-          <button
-            type="button"
-            className="lang"
-            onClick={() => setLang(t.otherLang)}
-          >
+          <Link className="lang" to={otherLanguagePath(pathname)} onClick={close}>
             {t.langLabel}
-          </button>
+          </Link>
           <button
             type="button"
             className="menu"
@@ -66,4 +75,9 @@ export default function Header() {
       </div>
     </header>
   );
+}
+
+function pageIsHome(pathname) {
+  const path = pathname.replace(/\/$/, "") || "/";
+  return path === "/" || path === "/zh";
 }

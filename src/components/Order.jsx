@@ -1,16 +1,19 @@
+import { Link } from "react-router-dom";
 import { useLang } from "../language";
+import { localized } from "../site";
 
-export default function Order() {
-  const { t } = useLang();
+export default function Order({ lead = false }) {
+  const { t, lang } = useLang();
+  const Title = lead ? "h1" : "h2";
 
   return (
-    <section className="section order" id="order">
+    <section className={`section order${lead ? " lead-page" : ""}`} id="order">
       <div className="section-intro">
         <p className="index">
           <span>{t.order.index}</span>
           {t.order.kicker}
         </p>
-        <h2>{t.order.title}</h2>
+        <Title>{t.order.title}</Title>
         <p className="lede">{t.order.lede}</p>
       </div>
       <div className="paths">
@@ -28,9 +31,9 @@ export default function Order() {
             <li key={step}>{step}</li>
           ))}
         </ol>
-        <a className="btn btn-forest" href="#contact">
-          {t.hero.primary}
-        </a>
+        <Link className="btn btn-forest" to={localized(lang, "/contact/")}>
+          {t.contact.submit}
+        </Link>
       </div>
     </section>
   );

@@ -1,30 +1,25 @@
+import { useState } from "react";
 import { useLang } from "../language";
 
-export default function Contact() {
+export default function Contact({ lead = false }) {
   const { t, site, lang } = useLang();
   const fields = t.contact.fields;
+  const [sent, setSent] = useState(false);
+  const Title = lead ? "h1" : "h2";
 
   const onSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const lines = [...data.entries()]
-      .filter(([, value]) => String(value).trim())
-      .map(([key, value]) => `${key}: ${value}`)
-      .join("\n");
-    const href = `mailto:${site.email}?subject=${encodeURIComponent(
-      t.contact.subject
-    )}&body=${encodeURIComponent(lines)}`;
-    window.location.href = href;
+    setSent(true);
   };
 
   return (
-    <section className="section contact" id="contact">
+    <section className={`section contact${lead ? " lead-page" : ""}`} id="contact">
       <div>
         <p className="index">
           <span>{t.contact.index}</span>
           {t.contact.kicker}
         </p>
-        <h2>{t.contact.title}</h2>
+        <Title>{t.contact.title}</Title>
         <p className="lede">{t.contact.lede}</p>
         <div className="address-block">
           <h3>{t.contact.addressTitle}</h3>
@@ -40,6 +35,12 @@ export default function Contact() {
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </div>
       </div>
+      {sent ? (
+        <div className="sent" role="status">
+          <h3>{t.contact.successTitle}</h3>
+          <p>{t.contact.success}</p>
+        </div>
+      ) : (
       <form key={lang} onSubmit={onSubmit}>
         <label>
           {fields.name}
@@ -83,8 +84,8 @@ export default function Contact() {
         <button className="btn btn-gold" type="submit">
           {t.contact.submit}
         </button>
-        <p className="hint">{t.contact.hint}</p>
       </form>
+      )}
     </section>
   );
 }

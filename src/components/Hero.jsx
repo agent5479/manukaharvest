@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { useLang } from "../language";
+import { localized } from "../site";
 
 export default function Hero() {
-  const { t, site } = useLang();
+  const { t, site, lang } = useLang();
 
   return (
     <section className="hero">
@@ -17,12 +19,12 @@ export default function Hero() {
         <p className="han">{t.hero.han}</p>
         <p className="lede">{t.hero.lede}</p>
         <div className="actions">
-          <a className="btn btn-gold" href="#contact">
+          <Link className="btn btn-gold" to={localized(lang, "/order/")}>
             {t.hero.primary}
-          </a>
-          <a className="btn btn-ghost" href="#brew">
+          </Link>
+          <Link className="btn btn-ghost" to={localized(lang, "/tea/")}>
             {t.hero.secondary}
-          </a>
+          </Link>
         </div>
       </div>
       <div className="seal" aria-hidden="true">

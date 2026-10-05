@@ -24,7 +24,8 @@ export const pageContent = {
     mapHref:
       "https://maps.google.com/?q=17+Rangihaeata+Road+Takaka+New+Zealand",
     images: {
-      hero: asset("images/julian-outdoors.jpg"),
+      hero: asset("images/steep.jpg"),
+      ranges: asset("images/julian-outdoors.jpg"),
       bush: asset("images/julian-hiking.jpg"),
       founder: asset("images/julian-hall.jpg"),
       cup: asset("images/loose-leaf.jpg"),
@@ -32,13 +33,12 @@ export const pageContent = {
   },
   en: {
     nav: [
-      { href: "#tea", label: "The tea" },
-      { href: "#place", label: "The bay" },
-      { href: "#craft", label: "Harvest" },
-      { href: "#heritage", label: "Heritage" },
-      { href: "#founder", label: "Julian" },
-      { href: "#order", label: "Order" },
+      { href: "/tea/", label: "The tea" },
+      { href: "/origin/", label: "Origin" },
+      { href: "/order/", label: "Order" },
+      { href: "/contact/", label: "Contact" },
     ],
+    skip: "Skip to content",
     langLabel: "中文",
     otherLang: "zh",
     menuOpen: "Open menu",
@@ -48,10 +48,9 @@ export const pageContent = {
       title: "Mānuka Harvest",
       han: "Wild mānuka leaf, packed for China",
       lede: "Loose-leaf herbal tea from native mānuka, cut by hand in the sheltered gullies above Tākaka. Dried, graded, and packed in small batches, then sent mostly to China.",
-      primary: "Talk about an order",
-      secondary: "How to brew it",
-      imageAlt:
-        "High country above Tākaka, from Julian Hall’s own photographs",
+      primary: "Request supply",
+      secondary: "The tea",
+      imageAlt: "Loose leaf steeping in a glass infuser",
       seal: ["Wild grown", "Est. 2007", "Tākaka"],
     },
     stats: [
@@ -60,6 +59,52 @@ export const pageContent = {
       { value: "100%", label: "Wild mānuka leaf" },
       { value: "0", label: "Caffeine, by nature" },
     ],
+    seo: {
+      home: {
+        title: "Mānuka Harvest — Wild leaf tea from Golden Bay",
+        description:
+          "Loose-leaf mānuka tea, hand-harvested in Golden Bay, New Zealand, and supplied mainly to China. Caffeine-free. Packed in Tākaka since 2007.",
+      },
+      tea: {
+        title: "Loose-leaf mānuka tea | Mānuka Harvest",
+        description:
+          "Earthy, resinous mānuka leaf tea. Whole leaf, nothing added, naturally caffeine-free. 25g and 60g bags from Golden Bay.",
+      },
+      origin: {
+        title: "Hand-harvested in Tākaka | Mānuka Harvest",
+        description:
+          "Wild mānuka from the sheltered gullies of Golden Bay, dried and packed in small batches by Julian Hall in Tākaka.",
+      },
+      order: {
+        title: "Wholesale mānuka tea for export | Mānuka Harvest",
+        description:
+          "Request supply of Mānuka Harvest tea for China and other export markets, or for a New Zealand shop.",
+      },
+      contact: {
+        title: "Contact Mānuka Harvest | Tākaka",
+        description:
+          "Write to the packing room at 17 Rangihaeata Road, Tākaka, Golden Bay, New Zealand.",
+      },
+    },
+    home: {
+      gates: [
+        {
+          href: "/tea/",
+          title: "The tea",
+          text: "Earthy and resinous, with a floral edge. Whole leaf, nothing added, no caffeine.",
+        },
+        {
+          href: "/origin/",
+          title: "The bay",
+          text: "Wild trees above Tākaka. Soft tips only, packed in small batches since 2007.",
+        },
+        {
+          href: "/order/",
+          title: "Supply",
+          text: "Most of the leaf goes to China. New Zealand shops are welcome too.",
+        },
+      ],
+    },
     place: {
       index: "01",
       kicker: "The place",
@@ -69,7 +114,7 @@ export const pageContent = {
         "Only the soft ends are taken. A small part of each tree is cut, the tree is left standing, and the same plant can be visited again about six months later. The leaf is then dried, graded, and packed at 17 Rangihaeata Road, Tākaka.",
       ],
       imageAlt: "Mossy bush country on the tracks above Golden Bay",
-      caption: "Bush country above the bay. Place photographs are Julian’s own, until a studio set is made.",
+      caption: "Bush country above Golden Bay.",
     },
     tea: {
       index: "02",
@@ -93,7 +138,6 @@ export const pageContent = {
       exportTitle: "Export formats",
       exportBody:
         "China is the main market. Retail bags and larger export packs are prepared to order in Tākaka. Carton size, labelling, and documents are agreed with each buyer. We do not publish a standing price list here.",
-      note: "These pack drawings stand in for photography. The real bags will replace them.",
       points: [
         "100% wild-grown mānuka leaf",
         "Hand-picked, graded, and packed",
@@ -166,8 +210,8 @@ export const pageContent = {
       kitchenTitle: "Beyond the pot",
       kitchen:
         "The dried whole leaf is also used as a rub for roasted meats, especially lamb and game, and can be warmed into a cooking oil. Once a bag is open, keep it sealed and away from heat and moisture.",
-      imageAlt: "A pot of herbal tea, standing in until the product is photographed",
-      caption: "Temporary serving photograph. The product itself is dried whole leaf, not a tea bag.",
+      imageAlt: "Loose leaf tea in a pot",
+      caption: "Steeped loose leaf.",
     },
     founder: {
       index: "06",
@@ -181,13 +225,13 @@ export const pageContent = {
         "The tea is still a small-batch job at home in Tākaka. Nineteen years on, the leaf is chosen the same way: wild trees, soft tips, a short trip from the hill to the packing table.",
       ],
       imageAlt: "Portrait of Julian Edward Hall",
-      caption: "Julian Hall, Tākaka. Photograph from his own collection.",
+      caption: "Julian Edward Hall, Tākaka.",
     },
     order: {
       index: "07",
       kicker: "How to order",
       title: "Write to the packing room",
-      lede: "There is no cart on this page yet. Orders, especially export orders for China, are arranged directly.",
+      lede: "Supply is arranged from the packing room in Tākaka. China is the main market. New Zealand shops are welcome too.",
       paths: [
         {
           title: "China and export",
@@ -236,8 +280,9 @@ export const pageContent = {
         "A personal order",
       ],
       optional: "optional",
-      submit: "Open this note in my email",
-      hint: "This opens your own email program with the note filled in. A direct form, and an editor for this page, will be connected later.",
+      submit: "Send the enquiry",
+      successTitle: "Received.",
+      success: "We reply from Tākaka.",
       subject: "Mānuka Harvest enquiry",
     },
     footer: {
@@ -248,13 +293,12 @@ export const pageContent = {
   },
   zh: {
     nav: [
-      { href: "#tea", label: "茶品" },
-      { href: "#place", label: "产地" },
-      { href: "#craft", label: "采收" },
-      { href: "#heritage", label: "传承" },
-      { href: "#founder", label: "创始人" },
-      { href: "#order", label: "订购" },
+      { href: "/tea/", label: "茶品" },
+      { href: "/origin/", label: "产地" },
+      { href: "/order/", label: "订购" },
+      { href: "/contact/", label: "联络" },
     ],
+    skip: "跳到正文",
     langLabel: "EN",
     otherLang: "en",
     menuOpen: "打开菜单",
@@ -264,9 +308,9 @@ export const pageContent = {
       title: "Mānuka Harvest",
       han: "野生麦卢卡叶茶",
       lede: "叶子采自塔卡卡一带避风山谷中的野生麦卢卡。手工采下嫩梢，自然阴干，小批量分级包装。大部分供应中国市场。",
-      primary: "洽谈订购",
-      secondary: "如何冲泡",
-      imageAlt: "塔卡卡上方的山地，来自朱利安·霍尔本人的照片",
+      primary: "洽谈供货",
+      secondary: "茶品",
+      imageAlt: "玻璃杯中的散叶茶正在浸泡",
       seal: ["野生", "2007", "塔卡卡"],
     },
     stats: [
@@ -275,6 +319,50 @@ export const pageContent = {
       { value: "100%", label: "野生麦卢卡叶" },
       { value: "0", label: "咖啡因" },
     ],
+    seo: {
+      home: {
+        title: "Mānuka Harvest 麦卢卡收获 — 黄金湾野生叶茶",
+        description:
+          "新西兰黄金湾野生麦卢卡散叶茶，塔卡卡手工采收、小批量包装，主要供应中国。天然不含咖啡因。",
+      },
+      tea: {
+        title: "麦卢卡散叶茶 | Mānuka Harvest",
+        description:
+          "泥土气与树脂香的麦卢卡叶茶。整叶、无添加、天然不含咖啡因。25克与60克，来自黄金湾。",
+      },
+      origin: {
+        title: "塔卡卡手工采收 | Mānuka Harvest",
+        description:
+          "黄金湾避风山谷中的野生麦卢卡，由朱利安·霍尔在塔卡卡小批量阴干、分级、包装。",
+      },
+      order: {
+        title: "麦卢卡叶茶出口供应 | Mānuka Harvest",
+        description: "向中国及其他市场申请供货，新西兰店铺亦可来信。由塔卡卡包装间直接安排。",
+      },
+      contact: {
+        title: "联络麦卢卡收获 | 塔卡卡",
+        description: "写信至新西兰黄金湾塔卡卡兰吉亚塔路17号包装间。",
+      },
+    },
+    home: {
+      gates: [
+        {
+          href: "/tea/",
+          title: "茶品",
+          text: "泥土气、树脂香，底子里有一点花。整叶，无添加，不含咖啡因。",
+        },
+        {
+          href: "/origin/",
+          title: "产地",
+          text: "塔卡卡上方的野树。只取嫩梢，自2007年起小批量包装。",
+        },
+        {
+          href: "/order/",
+          title: "供货",
+          text: "大部分运往中国。新西兰店铺也同样欢迎。",
+        },
+      ],
+    },
     place: {
       index: "01",
       kicker: "产地",
@@ -284,7 +372,7 @@ export const pageContent = {
         "只取柔软的梢头，每棵树只剪一小部分，树还留在原地。大约六个月后可以再来。叶子随后在塔卡卡兰吉亚塔路 17 号阴干、分级、包装。",
       ],
       imageAlt: "黄金湾上方长满苔藓的灌丛",
-      caption: "海湾上方的灌丛。产地照片来自朱利安本人，棚拍包装照片尚待更换。",
+      caption: "黄金湾上方的灌丛。",
     },
     tea: {
       index: "02",
@@ -306,7 +394,6 @@ export const pageContent = {
       exportTitle: "出口规格",
       exportBody:
         "中国是主要市场。零售袋和更大的出口包装都在塔卡卡按订单准备。箱规、标签和单证与每位买家单独商定。本页不刊登固定价格。",
-      note: "茶袋图形是暂代。正式产品照片到位后会换上。",
       points: [
         "百分之百野生麦卢卡叶",
         "手工采收、分级、包装",
@@ -378,8 +465,8 @@ export const pageContent = {
       kitchenTitle: "不只是喝",
       kitchen:
         "干燥的整叶也可以作烤肉的抹料，尤其适合羊肉和野味，也可以温入食用油。袋子开封后请密封，远离高温和潮湿。",
-      imageAlt: "一壶草本茶，暂代产品照片",
-      caption: "冲泡场景为临时照片。产品本身是干燥整叶，不是袋泡茶。",
+      imageAlt: "壶中的散叶茶",
+      caption: "浸泡后的散叶。",
     },
     founder: {
       index: "06",
@@ -393,13 +480,13 @@ export const pageContent = {
         "茶至今仍是塔卡卡家里的小批量工作。十九年过去，选叶的方式没有变：野树、嫩梢，从山坡到包装台只有很短的一段路。",
       ],
       imageAlt: "朱利安·爱德华·霍尔肖像",
-      caption: "朱利安·霍尔，塔卡卡。照片来自他本人的收藏。",
+      caption: "朱利安·爱德华·霍尔，塔卡卡。",
     },
     order: {
       index: "07",
       kicker: "如何订购",
       title: "写信到包装间",
-      lede: "这个页面还没有购物车。订单，尤其是发往中国的出口订单，直接商议。",
+      lede: "供货由塔卡卡的包装间直接安排。中国是主要市场，新西兰店铺也同样欢迎。",
       paths: [
         {
           title: "中国与出口",
@@ -443,8 +530,9 @@ export const pageContent = {
       },
       interests: ["出口到中国", "其他出口", "新西兰店铺", "个人购买"],
       optional: "选填",
-      submit: "用我的邮箱发出这封信",
-      hint: "这将打开您自己的邮箱，并把内容填好。以后会改成直接提交，页面文字也会开放给主人自己修改。",
+      submit: "提交询盘",
+      successTitle: "已收到。",
+      success: "我们会从塔卡卡回复。",
       subject: "麦卢卡收获 询盘",
     },
     footer: {
