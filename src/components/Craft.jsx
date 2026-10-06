@@ -22,10 +22,11 @@ export default function Craft() {
         ))}
       </ol>
       <figure className="quote-band">
-        <img src={site.images.ranges} alt="" />
+        <img src={site.images.grove} alt={t.craft.imageAlt} />
         <blockquote>
           <p>{t.craft.quote}</p>
         </blockquote>
+        <figcaption>{t.craft.credit}</figcaption>
       </figure>
     </section>
   );

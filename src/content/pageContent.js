@@ -29,6 +29,10 @@ export const pageContent = {
       bush: asset("images/julian-hiking.jpg"),
       founder: asset("images/julian-hall.jpg"),
       cup: asset("images/loose-leaf.jpg"),
+      tree: asset("images/manuka-tree.jpg"),
+      tips: asset("images/manuka-tips.jpg"),
+      flower: asset("images/manuka-flower.jpg"),
+      grove: asset("images/manuka-grove.jpg"),
     },
   },
   en: {
@@ -73,7 +77,7 @@ export const pageContent = {
       origin: {
         title: "Hand-harvested in Tākaka | Mānuka Harvest",
         description:
-          "Wild mānuka from the sheltered gullies of Golden Bay, dried and packed in small batches by Julian Hall in Tākaka.",
+          "Wild mānuka from New Zealand, hand-harvested for tea. Traditional use for colds, digestion, and the skin, and the oils studied in the leaf.",
       },
       order: {
         title: "Wholesale mānuka tea for export | Mānuka Harvest",
@@ -96,7 +100,7 @@ export const pageContent = {
         {
           href: "/origin/",
           title: "The bay",
-          text: "Wild trees above Tākaka. Soft tips only, packed in small batches since 2007.",
+          text: "Wild mānuka above the South Island. Soft tips only, and a leaf long kept as a medicinal cup.",
         },
         {
           href: "/order/",
@@ -113,14 +117,25 @@ export const pageContent = {
         "Mānuka Harvest works with wild Leptospermum scoparium growing around Golden Bay. The trees are not planted in lines for this tea. Harvesters look for recent growth in shade and shelter, because wind-exposed tips come up harder in the hand.",
         "Only the soft ends are taken. A small part of each tree is cut, the tree is left standing, and the same plant can be visited again about six months later. The leaf is then dried, graded, and packed at 17 Rangihaeata Road, Tākaka.",
       ],
-      imageAlt: "Mossy bush country on the tracks above Golden Bay",
-      caption: "Bush country above Golden Bay.",
+      imageAlt: "A wild mānuka tree in white flower, Westland, New Zealand",
+      caption:
+        "Flowering mānuka, Westland Tai Poutini National Park. Photo: Krzysztof Golik, CC BY-SA 4.0.",
     },
     tea: {
       index: "02",
       kicker: "The leaf",
       title: "Earthy, resinous, quietly floral",
       lede: "A caffeine-free loose-leaf herbal tea. Nothing is added. The cup is aromatic, with a slight bitterness and a floral edge if you steep it longer.",
+      imageAlt: "White mānuka flowers and narrow leaves on a wild branch",
+      caption:
+        "The soft tips, in flower. Abel Tasman National Park. Photo: Krzysztof Golik, CC BY-SA 4.0.",
+      benefitsTitle: "What the leaf has been taken for",
+      benefits: [
+        "A hot infusion for seasonal colds and fever, and for a tight chest.",
+        "A cup associated with an unsettled stomach and with urinary discomfort.",
+        "Bruised leaves, bound on the skin, in the older treatment of wounds.",
+        "Aromatic oils in the leaf, including leptospermone, studied for antibacterial and antioxidant activity.",
+      ],
       packs: [
         {
           weight: "25g",
@@ -175,27 +190,36 @@ export const pageContent = {
       ],
       quote:
         "Only the soft tips. Only the sheltered trees. Then we leave them to grow.",
+      imageAlt: "Flowering mānuka trees in the Silver Peaks, Otago",
+      credit: "Silver Peaks, Otago. Photo: Tomas Sobek, CC BY-SA 4.0.",
     },
     heritage: {
       index: "04",
       kicker: "A long use",
-      title: "The leaf was a drink here long before the company",
+      title: "The medicinal uses of the leaf",
+      imageAlt: "Close view of wild mānuka flowers and leaves",
+      caption:
+        "Mānuka in flower, Cullen Point, Marlborough. Photo: Krzysztof Golik, CC BY-SA 4.0.",
       cards: [
         {
-          title: "Māori practice",
-          text: "Māori brewed mānuka leaf and used the plant in the medicine of the day. Leaves were sometimes bruised into a poultice and bound with flax. A hot infusion of the leaf was part of that tradition.",
+          title: "Colds and fever",
+          text: "Māori brewed the leaf, and later settlers did the same. A hot infusion was drunk for seasonal colds and fever. The steam was used when the chest felt tight. In 1769, crew from Cook’s voyage were already drinking the green leaf after a long passage. That habit is where the English name “tea tree” comes from.",
         },
         {
-          title: "Why it is called tea tree",
-          text: "In 1769, crew from Cook’s voyage were drinking infusions of the green leaf after a long passage. Later settlers used it when black tea was scarce. That habit is where the English name “tea tree” comes from.",
+          title: "Digestion and urinary discomfort",
+          text: "In the same traditional practice the cup was taken for an unsettled stomach, and for urinary complaints. It was a household drink for those discomforts, not a clinic preparation.",
         },
         {
-          title: "What people traditionally sought",
-          text: "In that older practice the drink was taken for comfort in seasonal colds, and was associated with fever, digestion, and urinary complaints. The leaf is also rich in aromatic oils that have drawn modern research interest.",
+          title: "Skin",
+          text: "Fresh leaves were bruised into a poultice and bound on, sometimes with flax, for wounds and irritated skin. That is a use of the leaf on the body. It is separate from the cup.",
+        },
+        {
+          title: "The oils that have been studied",
+          text: "The leaf carries aromatic oils, including leptospermone, one of the β-triketones that give mānuka its resinous smell. Laboratory work has examined antibacterial and antioxidant activity in the leaf and its oil. Those studies are about the plant. They are not a clinical trial of this tea.",
         },
       ],
       disclaimer:
-        "This is cultural history and a description of flavour, not a health claim. Mānuka Harvest tea is a food. It is not a medicine, and it is not sold to diagnose, treat, cure, or prevent any condition. Research on the plant is not a promise about this cup.",
+        "Mānuka Harvest sells the dried leaf as a food. The uses above are tradition, and published laboratory research on the plant. This tea is not a medicine, and it is not sold to diagnose, treat, cure, or prevent any condition.",
     },
     brew: {
       index: "05",
@@ -333,7 +357,7 @@ export const pageContent = {
       origin: {
         title: "塔卡卡手工采收 | Mānuka Harvest",
         description:
-          "黄金湾避风山谷中的野生麦卢卡，由朱利安·霍尔在塔卡卡小批量阴干、分级、包装。",
+          "新西兰野生麦卢卡，手工采收成茶。传统上用于感冒、消化和皮肤，叶子中的芳香油也有实验室研究。",
       },
       order: {
         title: "麦卢卡叶茶出口供应 | Mānuka Harvest",
@@ -354,7 +378,7 @@ export const pageContent = {
         {
           href: "/origin/",
           title: "产地",
-          text: "塔卡卡上方的野树。只取嫩梢，自2007年起小批量包装。",
+          text: "南岛的野生麦卢卡。只取嫩梢。这片叶子长久以来也被当作药用茶饮。",
         },
         {
           href: "/order/",
@@ -371,14 +395,25 @@ export const pageContent = {
         "麦卢卡收获使用的是黄金湾一带野生的麦卢卡（Leptospermum scoparium）。这些树不是为做茶而栽成行列的。采收人找的是荫处和避风处刚抽出的嫩梢。迎风的叶子摸上去更硬、更扎手。",
         "只取柔软的梢头，每棵树只剪一小部分，树还留在原地。大约六个月后可以再来。叶子随后在塔卡卡兰吉亚塔路 17 号阴干、分级、包装。",
       ],
-      imageAlt: "黄金湾上方长满苔藓的灌丛",
-      caption: "黄金湾上方的灌丛。",
+      imageAlt: "新西兰西地开满白花的野生麦卢卡",
+      caption:
+        "开花的麦卢卡，西地大普蒂尼国家公园。摄影：Krzysztof Golik，CC BY-SA 4.0。",
     },
     tea: {
       index: "02",
       kicker: "这片叶子",
       title: "泥土气、树脂香，底子里有一点花",
       lede: "这是一种不含咖啡因的散叶草本茶。不添加任何东西。汤色清爽，香气明显；浸泡稍久，苦味和花香会更清楚。",
+      imageAlt: "野生枝条上的白花麦卢卡与窄叶",
+      caption:
+        "开花的嫩梢。阿贝尔塔斯曼国家公园。摄影：Krzysztof Golik，CC BY-SA 4.0。",
+      benefitsTitle: "这片叶子传统上用来做什么",
+      benefits: [
+        "热饮用于季节性感冒和发热，也用于胸口发紧的时候。",
+        "传统上这杯茶和肠胃不适、泌尿不适连在一起。",
+        "新鲜叶子捣碎外敷，是旧日处理伤口的一种用法。",
+        "叶子中的芳香油，包括 leptospermone，已有抗菌与抗氧化方面的实验室研究。",
+      ],
       packs: [
         {
           weight: "25克",
@@ -430,27 +465,36 @@ export const pageContent = {
         },
       ],
       quote: "只取嫩梢，只选避风的树，然后把树留下。",
+      imageAlt: "奥塔哥银峰开花的麦卢卡灌丛",
+      credit: "奥塔哥银峰。摄影：Tomas Sobek，CC BY-SA 4.0。",
     },
     heritage: {
       index: "04",
       kicker: "长久的用法",
-      title: "这片叶子被拿来泡水，远早于这家公司",
+      title: "这片叶子的药用",
+      imageAlt: "野生麦卢卡的花与叶特写",
+      caption:
+        "开花的麦卢卡，马尔堡卡伦角。摄影：Krzysztof Golik，CC BY-SA 4.0。",
       cards: [
         {
-          title: "毛利人的用法",
-          text: "毛利人把麦卢卡叶煎煮饮用，也把它用在当时的医药里。叶子有时会被捣成敷剂，用麻草包扎。热水浸出，是这套传统的一部分。",
+          title: "感冒与发热",
+          text: "毛利人煎煮这种叶子，后来的移民也这样做。热饮用于季节性感冒和发热，胸口发紧时也用它的蒸汽。1769 年，库克船队在长途航行之后已经在喝这种绿叶的浸液。英文俗名 “tea tree”（茶树）就是这样来的。",
         },
         {
-          title: "为什么叫茶树",
-          text: "1769 年，库克船队在长途航行之后，喝过这种绿叶的浸液。后来的欧洲移民在红茶不足时也拿它来代替。英文里 “tea tree”（茶树）这个俗名，就是这样来的。",
+          title: "消化与泌尿不适",
+          text: "在同一套传统里，这杯茶被用来应对肠胃不适，也和泌尿方面的不适连在一起。它是家庭里的一杯饮品，不是诊所里的制剂。",
         },
         {
-          title: "传统上人们指望它做什么",
-          text: "在旧日的用法里，这杯茶被用来在季节性感冒时求一点舒缓，也和退热、消化以及泌尿方面的不适连在一起。叶子含有芳香油，近代研究对此亦有兴趣。",
+          title: "皮肤",
+          text: "新鲜叶子会被捣成敷剂，有时用麻草包扎，用于伤口和受刺激的皮肤。这是把叶子用在身上，和饮用是两回事。",
+        },
+        {
+          title: "已被研究的芳香油",
+          text: "叶子含有芳香油，包括 leptospermone，这是带来树脂香的 β-三酮之一。实验室研究考察过叶子及其精油的抗菌与抗氧化活性。这些研究针对的是这种植物，不是对这款茶的临床试验。",
         },
       ],
       disclaimer:
-        "以上是文化与风味的说明，不是健康功效承诺。麦卢卡收获茶是食品，不是药品，不用于诊断、治疗、治愈或预防任何疾病。对植物的研究，也不等于对这一杯茶的承诺。",
+        "麦卢卡收获出售的是作为食品的干叶。上面写的是传统用法，以及对这种植物已发表的实验室研究。这款茶不是药品，不用于诊断、治疗、治愈或预防任何疾病。",
     },
     brew: {
       index: "05",

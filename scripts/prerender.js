@@ -126,13 +126,13 @@ const llms = `# Mānuka Harvest
 
 > Wild-grown mānuka leaf tea from Golden Bay, New Zealand. Hand-harvested, dried, and packed in small batches in Tākaka, and supplied mainly to China.
 
-Mānuka Harvest Limited packs loose-leaf herbal tea from wild Leptospermum scoparium. The leaf is caffeine-free, with nothing added. Retail bags are 25g and 60g. Export formats are arranged from the packing room.
+Mānuka Harvest Limited packs loose-leaf herbal tea from wild Leptospermum scoparium. The leaf is caffeine-free, with nothing added. Retail bags are 25g and 60g. Export formats are arranged from the packing room. Traditionally the infusion was taken for seasonal colds and fever, digestion, and urinary discomfort, and the fresh leaf was used on the skin. Laboratory research has examined antibacterial and antioxidant activity in the leaf and its oil. The tea is sold as a food, not as a medicine.
 
 ## Pages
 
 - [Home](${absolute("/")}): The house, the cup, and where to go next.
-- [The tea](${absolute("/tea/")}): Flavour, bags, brewing, and kitchen use.
-- [Origin](${absolute("/origin/")}): Golden Bay, the harvest, the tradition, and Julian Hall.
+- [The tea](${absolute("/tea/")}): Flavour, traditional uses, bags, and brewing.
+- [Origin](${absolute("/origin/")}): The trees, the harvest, the medicinal uses of the leaf, and Julian Hall.
 - [Order](${absolute("/order/")}): Wholesale supply for China and New Zealand shops.
 - [Contact](${absolute("/contact/")}): The packing room in Tākaka.
 

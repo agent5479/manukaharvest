@@ -1,16 +1,22 @@
 import { useLang } from "../language";
 
 export default function Heritage() {
-  const { t } = useLang();
+  const { t, site } = useLang();
 
   return (
     <section className="section heritage" id="heritage">
-      <div className="section-intro">
-        <p className="index">
-          <span>{t.heritage.index}</span>
-          {t.heritage.kicker}
-        </p>
-        <h2>{t.heritage.title}</h2>
+      <div className="heritage-top">
+        <div className="section-intro">
+          <p className="index">
+            <span>{t.heritage.index}</span>
+            {t.heritage.kicker}
+          </p>
+          <h2>{t.heritage.title}</h2>
+        </div>
+        <figure className="frame">
+          <img src={site.images.flower} alt={t.heritage.imageAlt} />
+          <figcaption>{t.heritage.caption}</figcaption>
+        </figure>
       </div>
       <div className="cards">
         {t.heritage.cards.map((card) => (

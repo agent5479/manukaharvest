@@ -17,7 +17,7 @@ export default function Place({ lead = false }) {
         ))}
       </div>
       <figure className="frame">
-        <img src={site.images.bush} alt={t.place.imageAlt} />
+        <img src={site.images.tree} alt={t.place.imageAlt} />
         <figcaption>{t.place.caption}</figcaption>
       </figure>
     </section>

@@ -16,8 +16,8 @@ export default function Tea({ lead = false }) {
         <p className="lede">{t.tea.lede}</p>
       </div>
       <figure className="frame frame-cup">
-        <img src={site.images.cup} alt={t.brew.imageAlt} />
-        <figcaption>{t.brew.caption}</figcaption>
+        <img src={site.images.tips} alt={t.tea.imageAlt} />
+        <figcaption>{t.tea.caption}</figcaption>
       </figure>
       </div>
       <div className="packs">
@@ -38,6 +38,15 @@ export default function Tea({ lead = false }) {
           <li key={point}>{point}</li>
         ))}
       </ul>
+      <div className="benefits">
+        <h2>{t.tea.benefitsTitle}</h2>
+        <ul>
+          {t.tea.benefits.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="disclaimer">{t.heritage.disclaimer}</p>
+      </div>
     </section>
   );
 }

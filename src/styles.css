@@ -500,6 +500,30 @@ section[id] { scroll-margin-top: 88px; }
   line-height: 1.2;
   margin: 0;
 }
+.quote-band figcaption {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.7rem;
+  z-index: 1;
+  margin: 0;
+  max-width: 36ch;
+  text-align: right;
+  font-size: 0.72rem;
+  color: rgba(244, 239, 230, 0.82);
+}
+.heritage-top {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.5rem;
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+.heritage-top .section-intro { margin-bottom: 0; }
+.heritage .cards { grid-template-columns: 1fr 1fr; }
+.benefits { margin-top: 2.2rem; max-width: 46rem; }
+.benefits h2 { font-size: 2.2rem; margin-bottom: 0.8rem; }
+.benefits ul { margin: 0 0 1rem; padding-left: 1.1rem; }
+.benefits li { margin: 0.35rem 0; }
 
 .cards {
   display: grid;
@@ -650,7 +674,7 @@ form .btn { justify-self: start; }
   }
   .site-header nav.is-open { display: flex; }
   .site-header nav a { padding: 0.7rem 0; font-size: 1.15rem; }
-  .place, .brew, .contact, .founder, .packs, .cards, .paths, .steps, .points, .stats, .site-footer, .gates, .tea-layout {
+  .place, .brew, .contact, .founder, .packs, .cards, .paths, .steps, .points, .stats, .site-footer, .gates, .tea-layout, .heritage-top {
     grid-template-columns: 1fr;
   }
   .pack-export { grid-column: auto; }
